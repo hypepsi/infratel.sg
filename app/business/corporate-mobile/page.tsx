@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { Users, Check, ArrowRight } from 'lucide-react'
@@ -57,9 +58,9 @@ export default function CorporateMobilePage() {
                     <span>Online management portal</span>
                   </li>
                 </ul>
-                <a href="/business/quote" className="block w-full px-6 py-3 bg-gray-100 text-gray-900 font-semibold rounded-lg hover:bg-gray-200 transition-colors text-center">
+                <Link href="/business/quote" className="block w-full px-6 py-3 bg-gray-100 text-gray-900 font-semibold rounded-lg hover:bg-gray-200 transition-colors text-center">
                   Get Quote
-                </a>
+                </Link>
               </div>
 
               {/* Business */}
@@ -95,9 +96,9 @@ export default function CorporateMobilePage() {
                     <span>Priority support</span>
                   </li>
                 </ul>
-                <a href="/business/quote" className="block w-full px-6 py-3 bg-infratel-red text-white font-semibold rounded-lg hover:bg-red-700 transition-colors text-center">
+                <Link href="/business/quote" className="block w-full px-6 py-3 bg-infratel-red text-white font-semibold rounded-lg hover:bg-red-700 transition-colors text-center">
                   Get Quote
-                </a>
+                </Link>
               </div>
 
               {/* Enterprise */}
@@ -129,9 +130,9 @@ export default function CorporateMobilePage() {
                     <span>24/7 premium support</span>
                   </li>
                 </ul>
-                <a href="/contact" className="block w-full px-6 py-3 bg-gray-100 text-gray-900 font-semibold rounded-lg hover:bg-gray-200 transition-colors text-center">
+                <Link href="/contact" className="block w-full px-6 py-3 bg-gray-100 text-gray-900 font-semibold rounded-lg hover:bg-gray-200 transition-colors text-center">
                   Contact Sales
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -216,13 +217,13 @@ export default function CorporateMobilePage() {
               Get a custom quote for your business today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/business/quote" className="inline-flex items-center justify-center px-8 py-4 bg-white text-infratel-red font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+              <Link href="/business/quote" className="inline-flex items-center justify-center px-8 py-4 bg-white text-infratel-red font-semibold rounded-lg hover:bg-gray-100 transition-colors">
                 Request a Quote
                 <ArrowRight className="ml-2" size={20} />
-              </a>
-              <a href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur border-2 border-white text-white font-semibold rounded-lg hover:bg-white/20 transition-colors">
+              </Link>
+              <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur border-2 border-white text-white font-semibold rounded-lg hover:bg-white/20 transition-colors">
                 Contact Sales
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { FileText, ArrowRight } from 'lucide-react'
@@ -46,10 +47,10 @@ export default function QuotePage() {
             <p className="text-lg text-gray-600 mb-8">
               Thank you for your interest. Our business solutions team will contact you within 1 business day.
             </p>
-            <a href="/business" className="inline-flex items-center justify-center px-6 py-3 bg-infratel-red text-white font-semibold rounded-lg hover:bg-red-700 transition-colors">
+            <Link href="/business" className="inline-flex items-center justify-center px-6 py-3 bg-infratel-red text-white font-semibold rounded-lg hover:bg-red-700 transition-colors">
               Back to Business Solutions
               <ArrowRight className="ml-2" size={20} />
-            </a>
+            </Link>
           </div>
         </div>
         <Footer />
