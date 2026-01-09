@@ -10,13 +10,110 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold;
   }
+
+  /* 平滑滚动 */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* 优化所有过渡 */
+  * {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+
+  /* ===== 淡入动画 ===== */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out forwards;
+  }
+
+  /* ===== 从下滑入 ===== */
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.6s ease-out forwards;
+  }
+
+  /* ===== 从左滑入 ===== */
+  @keyframes slide-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-slide-in-left {
+    animation: slide-in-left 0.6s ease-out forwards;
+  }
+
+  /* ===== 从右滑入 ===== */
+  @keyframes slide-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.6s ease-out forwards;
+  }
+
+  /* ===== 缩放进入 ===== */
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.5s ease-out forwards;
+  }
+
+  /* ===== 延迟动画类 ===== */
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+  .delay-600 { animation-delay: 600ms; }
   
+  /* ===== 浮动动画 ===== */
   @keyframes float {
     0%, 100% {
       transform: translateY(0px);
@@ -29,7 +126,22 @@
   .animate-float {
     animation: float 3s ease-in-out infinite;
   }
+
+  /* ===== 轻微浮动 ===== */
+  @keyframes float-gentle {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
   
+  .animate-float-gentle {
+    animation: float-gentle 4s ease-in-out infinite;
+  }
+  
+  /* ===== 旋转动画 ===== */
   @keyframes spin-slow {
     from {
       transform: rotate(0deg);
@@ -48,15 +160,6 @@
     }
   }
   
-  @keyframes grid-move {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(50px);
-    }
-  }
-  
   .animate-spin-slow {
     animation: spin-slow 15s linear infinite;
   }
@@ -65,6 +168,7 @@
     animation: spin-reverse 10s linear infinite;
   }
   
+  /* ===== 呼吸动画 ===== */
   @keyframes breathe {
     0%, 100% {
       opacity: 1;
@@ -78,5 +182,162 @@
   
   .animate-breathe {
     animation: breathe 8s ease-in-out infinite;
+  }
+
+  /* ===== 光泽扫过效果 ===== */
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 3s infinite;
+  }
+
+  /* ===== 脉冲光环 ===== */
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(0.95);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(0.95);
+      opacity: 1;
+    }
+  }
+
+  .animate-pulse-ring {
+    animation: pulse-ring 2s ease-in-out infinite;
+  }
+
+  /* ===== 悬停效果增强 ===== */
+  .hover-lift {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  /* ===== 按钮悬停光泽 ===== */
+  .btn-gradient-hover {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-gradient-hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent
+    );
+    transition: left 0.5s ease;
+  }
+
+  .btn-gradient-hover:hover::before {
+    left: 100%;
+  }
+
+  /* ===== 卡片悬停效果 ===== */
+  .card-hover {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card-hover:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  }
+
+  /* ===== 边框动画 ===== */
+  @keyframes border-dance {
+    0%, 100% {
+      border-color: #E60023;
+    }
+    50% {
+      border-color: #FF4458;
+    }
+  }
+
+  .animate-border-dance {
+    animation: border-dance 3s ease-in-out infinite;
+  }
+
+  /* ===== 渐变背景动画 ===== */
+  @keyframes gradient-shift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 8s ease infinite;
+  }
+
+  /* ===== 文字闪烁 ===== */
+  @keyframes text-shimmer {
+    0% {
+      background-position: -500px;
+    }
+    100% {
+      background-position: 500px;
+    }
+  }
+
+  .text-shimmer {
+    background: linear-gradient(
+      90deg,
+      #E60023 0%,
+      #FF4458 40%,
+      #E60023 60%,
+      #FF4458 100%
+    );
+    background-size: 500px 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: text-shimmer 3s linear infinite;
+  }
+
+  /* ===== 数字滚动效果 ===== */
+  @keyframes number-roll {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-number-roll {
+    animation: number-roll 0.6s ease-out;
   }
 }

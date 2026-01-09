@@ -65,7 +65,7 @@ export default function PricingGrid() {
     <section id="plans" className="py-16 sm:py-20 lg:py-24 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <div className="text-center max-w-3xl mx-auto mb-12 animate-slide-up">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-infratel-gray mb-4">
             Choose Your Perfect Plan
           </h2>
@@ -79,11 +79,12 @@ export default function PricingGrid() {
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`relative bg-white rounded-2xl shadow-lg transition-all duration-300 hover:shadow-2xl ${
+              className={`relative bg-white rounded-2xl shadow-lg transition-all duration-500 card-hover animate-slide-up ${
                 plan.highlighted
-                  ? 'ring-2 ring-infratel-red md:scale-105 lg:scale-110'
-                  : 'md:hover:scale-105'
+                  ? 'ring-2 ring-infratel-red md:scale-105 lg:scale-110 animate-pulse-ring'
+                  : ''
               }`}
+              style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Best Seller Badge */}
               {plan.highlighted && (
@@ -150,7 +151,7 @@ export default function PricingGrid() {
                 {/* CTA Button */}
                 <Link
                   href={`/signup?plan=${plan.name.toLowerCase().replace(/\s+/g, '-')}`}
-                  className={`block w-full text-center px-6 py-3 rounded-lg font-medium transition-all transform md:hover:scale-105 ${
+                  className={`block w-full text-center px-6 py-3 rounded-lg font-medium transition-all transform hover:scale-105 hover:-translate-y-1 btn-gradient-hover ${
                     plan.highlighted
                       ? 'bg-infratel-red text-white hover:bg-infratel-red-dark shadow-lg hover:shadow-xl'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
