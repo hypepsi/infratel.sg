@@ -1,6 +1,6 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import { Building2, Users, Shield, Headphones, Globe, BarChart } from 'lucide-react'
+import { Building2, Users, Shield, Headphones, Globe, BarChart, ArrowRight } from 'lucide-react'
 
 export default function BusinessPage() {
   return (
@@ -57,9 +57,10 @@ export default function BusinessPage() {
                     Dedicated account manager
                   </li>
                 </ul>
-                <button className="px-6 py-3 bg-infratel-red text-white font-semibold rounded-lg hover:bg-red-700 transition-colors">
+                <a href="/business/corporate-mobile" className="inline-flex items-center px-6 py-3 bg-infratel-red text-white font-semibold rounded-lg hover:bg-red-700 transition-colors">
                   Learn More
-                </button>
+                  <ArrowRight className="ml-2" size={16} />
+                </a>
               </div>
 
               <div className="bg-white rounded-xl p-8 shadow-lg">
@@ -88,9 +89,10 @@ export default function BusinessPage() {
                     24/7 network monitoring
                   </li>
                 </ul>
-                <button className="px-6 py-3 bg-infratel-red text-white font-semibold rounded-lg hover:bg-red-700 transition-colors">
-                  Learn More
-                </button>
+                <a href="/contact" className="inline-flex items-center px-6 py-3 bg-infratel-red text-white font-semibold rounded-lg hover:bg-red-700 transition-colors">
+                  Contact Sales
+                  <ArrowRight className="ml-2" size={16} />
+                </a>
               </div>
 
               <div className="bg-white rounded-xl p-8 shadow-lg">
@@ -119,9 +121,10 @@ export default function BusinessPage() {
                     Regular security audits
                   </li>
                 </ul>
-                <button className="px-6 py-3 bg-infratel-red text-white font-semibold rounded-lg hover:bg-red-700 transition-colors">
-                  Learn More
-                </button>
+                <a href="/contact" className="inline-flex items-center px-6 py-3 bg-infratel-red text-white font-semibold rounded-lg hover:bg-red-700 transition-colors">
+                  Contact Sales
+                  <ArrowRight className="ml-2" size={16} />
+                </a>
               </div>
 
               <div className="bg-white rounded-xl p-8 shadow-lg">
@@ -150,9 +153,10 @@ export default function BusinessPage() {
                     Real-time monitoring
                   </li>
                 </ul>
-                <button className="px-6 py-3 bg-infratel-red text-white font-semibold rounded-lg hover:bg-red-700 transition-colors">
+                <a href="/iot" className="inline-flex items-center px-6 py-3 bg-infratel-red text-white font-semibold rounded-lg hover:bg-red-700 transition-colors">
                   Learn More
-                </button>
+                  <ArrowRight className="ml-2" size={16} />
+                </a>
               </div>
             </div>
           </div>
@@ -213,12 +217,14 @@ export default function BusinessPage() {
               Speak to our business solutions team today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-infratel-red text-white font-semibold rounded-lg hover:bg-red-700 transition-colors">
+              <a href="/business/quote" className="inline-flex items-center justify-center px-8 py-4 bg-infratel-red text-white font-semibold rounded-lg hover:bg-red-700 transition-colors">
                 Request a Quote
-              </button>
-              <button className="px-8 py-4 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors">
-                Schedule a Demo
-              </button>
+                <ArrowRight className="ml-2" size={20} />
+              </a>
+              <a href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+                Contact Sales
+                <ArrowRight className="ml-2" size={20} />
+              </a>
             </div>
           </div>
         </div>
