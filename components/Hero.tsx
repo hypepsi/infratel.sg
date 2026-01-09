@@ -98,83 +98,85 @@ export default function Hero() {
 
           {/* Right Visual - Abstract Singapore Constellation */}
           <div className="relative h-[500px] pointer-events-none">
-            <svg className="absolute inset-0 w-full h-full opacity-40" viewBox="0 0 500 500">
-              {/* Abstract Marina Bay Sands - Three towers with connecting top */}
+            <svg className="absolute inset-0 w-full h-full opacity-40" viewBox="0 0 600 500">
+              {/* Abstract Marina Bay Sands - Left side, more prominent */}
               
               {/* Tower 1 (left) */}
-              <line x1="150" y1="350" x2="150" y2="180" stroke="#6B7280" strokeWidth="1.5" className="animate-breathe" />
+              <line x1="80" y1="380" x2="80" y2="200" stroke="#6B7280" strokeWidth="2" className="animate-breathe" />
               {/* Tower 2 (middle) */}
-              <line x1="220" y1="350" x2="220" y2="160" stroke="#6B7280" strokeWidth="1.5" className="animate-breathe" style={{ animationDelay: '0.5s' }} />
+              <line x1="160" y1="380" x2="160" y2="170" stroke="#6B7280" strokeWidth="2" className="animate-breathe" style={{ animationDelay: '0.5s' }} />
               {/* Tower 3 (right) */}
-              <line x1="290" y1="350" x2="290" y2="180" stroke="#6B7280" strokeWidth="1.5" className="animate-breathe" style={{ animationDelay: '1s' }} />
+              <line x1="240" y1="380" x2="240" y2="200" stroke="#6B7280" strokeWidth="2" className="animate-breathe" style={{ animationDelay: '1s' }} />
               
               {/* Connecting "SkyPark" - curved top structure */}
               <path
-                d="M 145 180 Q 220 150 295 180"
+                d="M 75 200 Q 160 160 245 200"
                 fill="none"
                 stroke="#E60023"
-                strokeWidth="2"
+                strokeWidth="2.5"
                 className="animate-breathe"
                 style={{ animationDelay: '1.5s' }}
               />
               
               {/* Tower nodes */}
-              <circle cx="150" cy="180" r="4" fill="#E60023" opacity="0.6" className="animate-pulse" />
-              <circle cx="220" cy="160" r="4" fill="#E60023" opacity="0.6" className="animate-pulse" style={{ animationDelay: '0.5s' }} />
-              <circle cx="290" cy="180" r="4" fill="#E60023" opacity="0.6" className="animate-pulse" style={{ animationDelay: '1s' }} />
+              <circle cx="80" cy="200" r="5" fill="#E60023" opacity="0.7" className="animate-pulse" />
+              <circle cx="160" cy="170" r="5" fill="#E60023" opacity="0.7" className="animate-pulse" style={{ animationDelay: '0.5s' }} />
+              <circle cx="240" cy="200" r="5" fill="#E60023" opacity="0.7" className="animate-pulse" style={{ animationDelay: '1s' }} />
               
-              {/* Abstract Singapore Flyer (observation wheel) */}
+              {/* Abstract Singapore Flyer - Right side, separated */}
               <circle
-                cx="380"
-                cy="280"
-                r="80"
+                cx="480"
+                cy="150"
+                r="90"
                 fill="none"
                 stroke="#9CA3AF"
-                strokeWidth="1"
+                strokeWidth="1.5"
                 className="animate-breathe"
                 style={{ animationDelay: '2s' }}
               />
               <circle
-                cx="380"
-                cy="280"
-                r="70"
+                cx="480"
+                cy="150"
+                r="75"
                 fill="none"
                 stroke="#D1D5DB"
-                strokeWidth="0.5"
+                strokeWidth="0.8"
                 opacity="0.6"
                 className="animate-breathe"
                 style={{ animationDelay: '2.5s' }}
               />
               
               {/* Flyer center hub */}
-              <circle cx="380" cy="280" r="8" fill="#E60023" opacity="0.4" className="animate-pulse" style={{ animationDelay: '2s' }} />
+              <circle cx="480" cy="150" r="10" fill="#E60023" opacity="0.5" className="animate-pulse" style={{ animationDelay: '2s' }} />
               
-              {/* Spoke lines radiating from center */}
-              <line x1="380" y1="280" x2="380" y2="200" stroke="#D1D5DB" strokeWidth="0.5" opacity="0.4" />
-              <line x1="380" y1="280" x2="460" y2="280" stroke="#D1D5DB" strokeWidth="0.5" opacity="0.4" />
-              <line x1="380" y1="280" x2="330" y2="230" stroke="#D1D5DB" strokeWidth="0.5" opacity="0.4" />
-              <line x1="380" y1="280" x2="430" y2="330" stroke="#D1D5DB" strokeWidth="0.5" opacity="0.4" />
+              {/* Spoke lines radiating from center - only 4 main spokes */}
+              <line x1="480" y1="150" x2="480" y2="60" stroke="#D1D5DB" strokeWidth="0.8" opacity="0.4" />
+              <line x1="480" y1="150" x2="570" y2="150" stroke="#D1D5DB" strokeWidth="0.8" opacity="0.4" />
+              <line x1="480" y1="150" x2="420" y2="90" stroke="#D1D5DB" strokeWidth="0.8" opacity="0.4" />
+              <line x1="480" y1="150" x2="540" y2="210" stroke="#D1D5DB" strokeWidth="0.8" opacity="0.4" />
               
-              {/* Network connections between landmarks */}
-              <line x1="220" y1="160" x2="380" y2="280" stroke="#9CA3AF" strokeWidth="0.5" opacity="0.3" strokeDasharray="4 4" />
-              <line x1="290" y1="180" x2="380" y2="280" stroke="#9CA3AF" strokeWidth="0.5" opacity="0.3" strokeDasharray="4 4" />
+              {/* Subtle connecting network lines between landmarks */}
+              <line x1="240" y1="200" x2="390" y2="150" stroke="#D1D5DB" strokeWidth="0.5" opacity="0.2" strokeDasharray="5 5" />
+              <line x1="160" y1="170" x2="390" y2="150" stroke="#D1D5DB" strokeWidth="0.5" opacity="0.2" strokeDasharray="5 5" />
               
-              {/* Additional data nodes scattered */}
-              <circle cx="320" cy="240" r="2" fill="#E60023" opacity="0.3" className="animate-pulse" style={{ animationDelay: '3s' }} />
-              <circle cx="180" cy="280" r="2.5" fill="#E60023" opacity="0.35" className="animate-pulse" style={{ animationDelay: '3.5s' }} />
-              <circle cx="440" cy="220" r="2" fill="#E60023" opacity="0.3" className="animate-pulse" style={{ animationDelay: '4s' }} />
+              {/* Additional atmospheric data nodes - scattered */}
+              <circle cx="350" cy="280" r="2.5" fill="#E60023" opacity="0.35" className="animate-pulse" style={{ animationDelay: '3s' }} />
+              <circle cx="120" cy="320" r="2" fill="#E60023" opacity="0.3" className="animate-pulse" style={{ animationDelay: '3.5s' }} />
+              <circle cx="520" cy="280" r="2.5" fill="#E60023" opacity="0.35" className="animate-pulse" style={{ animationDelay: '4s' }} />
+              <circle cx="300" cy="100" r="2" fill="#E60023" opacity="0.3" className="animate-pulse" style={{ animationDelay: '4.5s' }} />
               
-              {/* Connecting lines to data nodes */}
-              <line x1="220" y1="160" x2="320" y2="240" stroke="#D1D5DB" strokeWidth="0.5" opacity="0.2" />
-              <line x1="150" y1="180" x2="180" y2="280" stroke="#D1D5DB" strokeWidth="0.5" opacity="0.2" />
-              <line x1="380" y1="200" x2="440" y2="220" stroke="#D1D5DB" strokeWidth="0.5" opacity="0.2" />
+              {/* Subtle connecting lines to data nodes */}
+              <line x1="160" y1="170" x2="300" y2="100" stroke="#E5E7EB" strokeWidth="0.5" opacity="0.15" />
+              <line x1="240" y1="200" x2="350" y2="280" stroke="#E5E7EB" strokeWidth="0.5" opacity="0.15" />
+              <line x1="480" y1="240" x2="520" y2="280" stroke="#E5E7EB" strokeWidth="0.5" opacity="0.15" />
               
-              {/* Subtle baseline/ground */}
-              <line x1="100" y1="350" x2="500" y2="350" stroke="#E5E7EB" strokeWidth="0.5" opacity="0.3" />
+              {/* Subtle baseline/horizon */}
+              <line x1="20" y1="380" x2="600" y2="380" stroke="#E5E7EB" strokeWidth="0.5" opacity="0.25" />
             </svg>
 
-            {/* Subtle glow effect */}
-            <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-gradient-to-br from-red-100/30 to-transparent rounded-full blur-3xl animate-breathe"></div>
+            {/* Dual subtle glow effects for depth */}
+            <div className="absolute top-1/4 left-1/4 w-48 h-48 bg-gradient-to-br from-red-100/25 to-transparent rounded-full blur-3xl animate-breathe"></div>
+            <div className="absolute top-1/3 right-1/4 w-56 h-56 bg-gradient-to-br from-blue-50/20 to-transparent rounded-full blur-3xl animate-breathe" style={{ animationDelay: '3s' }}></div>
           </div>
         </div>
       </div>
