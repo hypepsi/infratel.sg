@@ -9,14 +9,14 @@ export default function BusinessPage() {
       <Header />
       
       {/* Hero */}
-      <section className="bg-gradient-to-br from-infratel-red to-red-600 text-white py-16">
+      <section className="bg-gradient-to-br from-infratel-red to-red-600 text-white py-12 sm:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <Building2 className="w-16 h-16 mx-auto mb-6" />
-            <h1 className="text-4xl sm:text-5xl font-bold mb-4">
+            <Building2 className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6" />
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
               Enterprise Solutions
             </h1>
-            <p className="text-xl text-white/90">
+            <p className="text-base sm:text-lg lg:text-xl text-white/90">
               Powerful connectivity solutions tailored for Singapore businesses. From SMEs to large enterprises.
             </p>
           </div>
@@ -24,137 +24,137 @@ export default function BusinessPage() {
       </section>
 
       {/* Solutions */}
-      <section className="py-16">
+      <section className="py-12 sm:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 sm:mb-12 text-center">
               Business Solutions
             </h2>
             
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white rounded-xl p-8 shadow-lg">
-                <Users className="w-12 h-12 text-infratel-red mb-4" />
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+            <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
+              <div className="bg-white rounded-xl p-6 sm:p-8 shadow-lg">
+                <Users className="w-10 h-10 sm:w-12 sm:h-12 text-infratel-red mb-3 sm:mb-4" />
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-3">
                   Corporate Mobile Plans
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
                   Flexible mobile plans for your team with centralized billing and management.
                 </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-1.5 h-1.5 bg-infratel-red rounded-full mr-3"></div>
+                <ul className="space-y-2 mb-4 sm:mb-6">
+                  <li className="flex items-center text-sm sm:text-base text-gray-700">
+                    <div className="w-1.5 h-1.5 bg-infratel-red rounded-full mr-3 flex-shrink-0"></div>
                     Volume discounts from 10 lines
                   </li>
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-1.5 h-1.5 bg-infratel-red rounded-full mr-3"></div>
+                  <li className="flex items-center text-sm sm:text-base text-gray-700">
+                    <div className="w-1.5 h-1.5 bg-infratel-red rounded-full mr-3 flex-shrink-0"></div>
                     Single consolidated bill
                   </li>
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-1.5 h-1.5 bg-infratel-red rounded-full mr-3"></div>
+                  <li className="flex items-center text-sm sm:text-base text-gray-700">
+                    <div className="w-1.5 h-1.5 bg-infratel-red rounded-full mr-3 flex-shrink-0"></div>
                     Online portal for line management
                   </li>
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-1.5 h-1.5 bg-infratel-red rounded-full mr-3"></div>
+                  <li className="flex items-center text-sm sm:text-base text-gray-700">
+                    <div className="w-1.5 h-1.5 bg-infratel-red rounded-full mr-3 flex-shrink-0"></div>
                     Dedicated account manager
                   </li>
                 </ul>
-                <Link href="/business/corporate-mobile" className="inline-flex items-center px-6 py-3 bg-infratel-red text-white font-semibold rounded-lg hover:bg-red-700 transition-colors">
+                <Link href="/business/corporate-mobile" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 bg-infratel-red text-white text-sm sm:text-base font-semibold rounded-lg hover:bg-red-700 transition-colors touch-manipulation">
                   Learn More
                   <ArrowRight className="ml-2" size={16} />
                 </Link>
               </div>
 
-              <div className="bg-white rounded-xl p-8 shadow-lg">
-                <Globe className="w-12 h-12 text-infratel-red mb-4" />
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+              <div className="bg-white rounded-xl p-6 sm:p-8 shadow-lg">
+                <Globe className="w-10 h-10 sm:w-12 sm:h-12 text-infratel-red mb-3 sm:mb-4" />
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-3">
                   Enterprise Connectivity
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
                   High-speed dedicated internet and private network solutions.
                 </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-1.5 h-1.5 bg-infratel-red rounded-full mr-3"></div>
+                <ul className="space-y-2 mb-4 sm:mb-6">
+                  <li className="flex items-center text-sm sm:text-base text-gray-700">
+                    <div className="w-1.5 h-1.5 bg-infratel-red rounded-full mr-3 flex-shrink-0"></div>
                     Dedicated fiber up to 10Gbps
                   </li>
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-1.5 h-1.5 bg-infratel-red rounded-full mr-3"></div>
+                  <li className="flex items-center text-sm sm:text-base text-gray-700">
+                    <div className="w-1.5 h-1.5 bg-infratel-red rounded-full mr-3 flex-shrink-0"></div>
                     99.9% SLA guarantee
                   </li>
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-1.5 h-1.5 bg-infratel-red rounded-full mr-3"></div>
+                  <li className="flex items-center text-sm sm:text-base text-gray-700">
+                    <div className="w-1.5 h-1.5 bg-infratel-red rounded-full mr-3 flex-shrink-0"></div>
                     Static IP addresses
                   </li>
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-1.5 h-1.5 bg-infratel-red rounded-full mr-3"></div>
+                  <li className="flex items-center text-sm sm:text-base text-gray-700">
+                    <div className="w-1.5 h-1.5 bg-infratel-red rounded-full mr-3 flex-shrink-0"></div>
                     24/7 network monitoring
                   </li>
                 </ul>
-                <Link href="/contact" className="inline-flex items-center px-6 py-3 bg-infratel-red text-white font-semibold rounded-lg hover:bg-red-700 transition-colors">
+                <Link href="/contact" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 bg-infratel-red text-white text-sm sm:text-base font-semibold rounded-lg hover:bg-red-700 transition-colors touch-manipulation">
                   Contact Sales
                   <ArrowRight className="ml-2" size={16} />
                 </Link>
               </div>
 
-              <div className="bg-white rounded-xl p-8 shadow-lg">
-                <Shield className="w-12 h-12 text-infratel-red mb-4" />
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+              <div className="bg-white rounded-xl p-6 sm:p-8 shadow-lg">
+                <Shield className="w-10 h-10 sm:w-12 sm:h-12 text-infratel-red mb-3 sm:mb-4" />
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-3">
                   Cybersecurity Services
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
                   Protect your business with enterprise-grade security solutions.
                 </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-1.5 h-1.5 bg-infratel-red rounded-full mr-3"></div>
+                <ul className="space-y-2 mb-4 sm:mb-6">
+                  <li className="flex items-center text-sm sm:text-base text-gray-700">
+                    <div className="w-1.5 h-1.5 bg-infratel-red rounded-full mr-3 flex-shrink-0"></div>
                     Advanced threat protection
                   </li>
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-1.5 h-1.5 bg-infratel-red rounded-full mr-3"></div>
+                  <li className="flex items-center text-sm sm:text-base text-gray-700">
+                    <div className="w-1.5 h-1.5 bg-infratel-red rounded-full mr-3 flex-shrink-0"></div>
                     DDoS mitigation
                   </li>
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-1.5 h-1.5 bg-infratel-red rounded-full mr-3"></div>
+                  <li className="flex items-center text-sm sm:text-base text-gray-700">
+                    <div className="w-1.5 h-1.5 bg-infratel-red rounded-full mr-3 flex-shrink-0"></div>
                     Secure web gateway
                   </li>
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-1.5 h-1.5 bg-infratel-red rounded-full mr-3"></div>
+                  <li className="flex items-center text-sm sm:text-base text-gray-700">
+                    <div className="w-1.5 h-1.5 bg-infratel-red rounded-full mr-3 flex-shrink-0"></div>
                     Regular security audits
                   </li>
                 </ul>
-                <Link href="/contact" className="inline-flex items-center px-6 py-3 bg-infratel-red text-white font-semibold rounded-lg hover:bg-red-700 transition-colors">
+                <Link href="/contact" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 bg-infratel-red text-white text-sm sm:text-base font-semibold rounded-lg hover:bg-red-700 transition-colors touch-manipulation">
                   Contact Sales
                   <ArrowRight className="ml-2" size={16} />
                 </Link>
               </div>
 
-              <div className="bg-white rounded-xl p-8 shadow-lg">
-                <BarChart className="w-12 h-12 text-infratel-red mb-4" />
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+              <div className="bg-white rounded-xl p-6 sm:p-8 shadow-lg">
+                <BarChart className="w-10 h-10 sm:w-12 sm:h-12 text-infratel-red mb-3 sm:mb-4" />
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-3">
                   IoT & M2M Solutions
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
                   Connect your devices with reliable IoT connectivity.
                 </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-1.5 h-1.5 bg-infratel-red rounded-full mr-3"></div>
+                <ul className="space-y-2 mb-4 sm:mb-6">
+                  <li className="flex items-center text-sm sm:text-base text-gray-700">
+                    <div className="w-1.5 h-1.5 bg-infratel-red rounded-full mr-3 flex-shrink-0"></div>
                     Low-cost data plans
                   </li>
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-1.5 h-1.5 bg-infratel-red rounded-full mr-3"></div>
+                  <li className="flex items-center text-sm sm:text-base text-gray-700">
+                    <div className="w-1.5 h-1.5 bg-infratel-red rounded-full mr-3 flex-shrink-0"></div>
                     Global SIM cards
                   </li>
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-1.5 h-1.5 bg-infratel-red rounded-full mr-3"></div>
+                  <li className="flex items-center text-sm sm:text-base text-gray-700">
+                    <div className="w-1.5 h-1.5 bg-infratel-red rounded-full mr-3 flex-shrink-0"></div>
                     API integration
                   </li>
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-1.5 h-1.5 bg-infratel-red rounded-full mr-3"></div>
+                  <li className="flex items-center text-sm sm:text-base text-gray-700">
+                    <div className="w-1.5 h-1.5 bg-infratel-red rounded-full mr-3 flex-shrink-0"></div>
                     Real-time monitoring
                   </li>
                 </ul>
-                <Link href="/iot" className="inline-flex items-center px-6 py-3 bg-infratel-red text-white font-semibold rounded-lg hover:bg-red-700 transition-colors">
+                <Link href="/iot" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 bg-infratel-red text-white text-sm sm:text-base font-semibold rounded-lg hover:bg-red-700 transition-colors touch-manipulation">
                   Learn More
                   <ArrowRight className="ml-2" size={16} />
                 </Link>
@@ -165,10 +165,10 @@ export default function BusinessPage() {
       </section>
 
       {/* Benefits */}
-      <section className="py-16 bg-white">
+      <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 sm:mb-12 text-center">
               Why Businesses Choose Infratel
             </h2>
             
@@ -208,21 +208,21 @@ export default function BusinessPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+      <section className="py-12 sm:py-16 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-white/90 mb-8">
+            <p className="text-base sm:text-lg lg:text-xl text-white/90 mb-6 sm:mb-8">
               Speak to our business solutions team today.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/business/quote" className="inline-flex items-center justify-center px-8 py-4 bg-infratel-red text-white font-semibold rounded-lg hover:bg-red-700 transition-colors">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+              <Link href="/business/quote" className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-infratel-red text-white text-sm sm:text-base font-semibold rounded-lg hover:bg-red-700 transition-colors touch-manipulation">
                 Request a Quote
                 <ArrowRight className="ml-2" size={20} />
               </Link>
-              <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+              <Link href="/contact" className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-white text-gray-900 text-sm sm:text-base font-semibold rounded-lg hover:bg-gray-100 transition-colors touch-manipulation">
                 Contact Sales
                 <ArrowRight className="ml-2" size={20} />
               </Link>

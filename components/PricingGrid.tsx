@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { Check, Star, Globe } from 'lucide-react'
 
 interface PricingPlan {
@@ -74,14 +75,14 @@ export default function PricingGrid() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
           {plans.map((plan, index) => (
             <div
               key={index}
               className={`relative bg-white rounded-2xl shadow-lg transition-all duration-300 hover:shadow-2xl ${
                 plan.highlighted
-                  ? 'ring-2 ring-infratel-red scale-105 lg:scale-110'
-                  : 'hover:scale-105'
+                  ? 'ring-2 ring-infratel-red md:scale-105 lg:scale-110'
+                  : 'md:hover:scale-105'
               }`}
             >
               {/* Best Seller Badge */}
@@ -94,11 +95,11 @@ export default function PricingGrid() {
                 </div>
               )}
 
-              <div className="p-8">
+              <div className="p-6 sm:p-8">
                 {/* Plan Header */}
                 <div className="flex items-center justify-between mb-4">
                   <div
-                    className={`p-3 rounded-lg ${
+                    className={`p-2 sm:p-3 rounded-lg ${
                       plan.highlighted
                         ? 'bg-infratel-red text-white'
                         : 'bg-gray-100 text-gray-700'
@@ -106,24 +107,24 @@ export default function PricingGrid() {
                   >
                     {plan.icon}
                   </div>
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${plan.tagColor}`}>
+                  <span className={`px-2 sm:px-3 py-1 rounded-full text-xs font-medium ${plan.tagColor}`}>
                     {plan.tag}
                   </span>
                 </div>
 
-                <h3 className="text-2xl font-bold text-infratel-gray mb-2">
+                <h3 className="text-xl sm:text-2xl font-bold text-infratel-gray mb-2">
                   {plan.name}
                 </h3>
 
                 {/* Price */}
                 <div className="mb-6">
                   <div className="flex items-baseline">
-                    <span className="text-5xl font-bold text-infratel-red">
+                    <span className="text-4xl sm:text-5xl font-bold text-infratel-red">
                       {plan.price}
                     </span>
-                    <span className="text-gray-600 ml-2">/mth</span>
+                    <span className="text-gray-600 ml-2 text-sm sm:text-base">/mth</span>
                   </div>
-                  <p className="text-sm text-gray-500 mt-1">w/GST</p>
+                  <p className="text-xs sm:text-sm text-gray-500 mt-1">w/GST</p>
                 </div>
 
                 {/* Features */}
@@ -147,16 +148,16 @@ export default function PricingGrid() {
                 </ul>
 
                 {/* CTA Button */}
-                <a
+                <Link
                   href={`/signup?plan=${plan.name.toLowerCase().replace(/\s+/g, '-')}`}
-                  className={`block w-full text-center px-6 py-3 rounded-lg font-medium transition-all transform hover:scale-105 ${
+                  className={`block w-full text-center px-6 py-3 rounded-lg font-medium transition-all transform md:hover:scale-105 ${
                     plan.highlighted
                       ? 'bg-infratel-red text-white hover:bg-infratel-red-dark shadow-lg hover:shadow-xl'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
                 >
                   Get Started →
-                </a>
+                </Link>
 
                 <p className="text-xs text-center text-gray-500 mt-4">
                   Free delivery · Activate instantly
