@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { Wifi, Zap, Shield, CheckCircle, Home } from 'lucide-react'
@@ -108,15 +109,16 @@ export default function BroadbandPage() {
                     ))}
                   </ul>
                   
-                  <button
-                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${
+                  <Link
+                    href={`/broadband/signup?plan=${plan.name.toLowerCase().replace(/\s+/g, '-')}`}
+                    className={`block w-full py-3 px-6 rounded-lg font-semibold text-center transition-all touch-manipulation ${
                       plan.highlight
                         ? 'bg-infratel-red text-white hover:bg-red-700'
                         : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                     }`}
                   >
                     Get Started
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))}
