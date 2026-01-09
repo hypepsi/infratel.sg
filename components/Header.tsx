@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { Search } from 'lucide-react'
 import { useState } from 'react'
 
@@ -12,46 +13,46 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="flex items-center">
+            <Link href="/" className="flex items-center">
               <span className="text-2xl font-bold tracking-tight text-infratel-red">
                 Infratel
               </span>
               <span className="text-xs text-gray-500 ml-1 mt-2">.sg</span>
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a
-              href="/mobile"
+            <Link
+              href="/plans"
               className="text-sm font-medium text-gray-700 hover:text-infratel-red transition-colors"
             >
               Mobile
-            </a>
-            <a
+            </Link>
+            <Link
               href="/broadband"
               className="text-sm font-medium text-gray-700 hover:text-infratel-red transition-colors"
             >
               Broadband
-            </a>
-            <a
+            </Link>
+            <Link
               href="/roaming"
               className="text-sm font-medium text-gray-700 hover:text-infratel-red transition-colors"
             >
               Roaming
-            </a>
-            <a
+            </Link>
+            <Link
               href="/business"
               className="text-sm font-medium text-gray-700 hover:text-infratel-red transition-colors"
             >
               Business
-            </a>
-            <a
+            </Link>
+            <Link
               href="/rewards"
               className="text-sm font-medium text-gray-700 hover:text-infratel-red transition-colors"
             >
               Rewards
-            </a>
+            </Link>
           </nav>
 
           {/* Right Side Actions */}
@@ -62,12 +63,12 @@ export default function Header() {
             >
               <Search size={20} />
             </button>
-            <a
+            <Link
               href="/login"
               className="hidden sm:inline-flex items-center px-4 py-2 border border-infratel-red text-sm font-medium rounded-md text-infratel-red hover:bg-infratel-red hover:text-white transition-colors"
             >
               Log In
-            </a>
+            </Link>
 
             {/* Mobile menu button */}
             <button
@@ -105,42 +106,48 @@ export default function Header() {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200">
             <nav className="flex flex-col space-y-4">
-              <a
-                href="/mobile"
+              <Link
+                href="/plans"
                 className="text-base font-medium text-gray-700 hover:text-infratel-red"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Mobile
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/broadband"
                 className="text-base font-medium text-gray-700 hover:text-infratel-red"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Broadband
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/roaming"
                 className="text-base font-medium text-gray-700 hover:text-infratel-red"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Roaming
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/business"
                 className="text-base font-medium text-gray-700 hover:text-infratel-red"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Business
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/rewards"
                 className="text-base font-medium text-gray-700 hover:text-infratel-red"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Rewards
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/login"
                 className="inline-flex items-center justify-center px-4 py-2 border border-infratel-red text-base font-medium rounded-md text-infratel-red hover:bg-infratel-red hover:text-white"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Log In
-              </a>
+              </Link>
             </nav>
           </div>
         )}

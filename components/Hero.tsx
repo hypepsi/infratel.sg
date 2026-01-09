@@ -1,8 +1,9 @@
+import Link from 'next/link'
 import { ArrowRight, MapPin } from 'lucide-react'
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-br from-gray-50 to-white py-16 sm:py-20 lg:py-24 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-gray-50 to-white py-12 sm:py-16 lg:py-20 overflow-hidden">
       {/* Unified subtle grid background across entire hero */}
       <div className="absolute inset-0 opacity-5" style={{
         backgroundImage: `
@@ -13,47 +14,47 @@ export default function Hero() {
       }}></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
           <div className="max-w-2xl">
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-infratel-red/10 text-infratel-red text-sm font-medium mb-6">
+            <div className="inline-flex items-center px-3 py-1 rounded-full bg-infratel-red/10 text-infratel-red text-sm font-medium mb-4 sm:mb-6">
               <span className="w-2 h-2 bg-infratel-red rounded-full mr-2 animate-pulse"></span>
               5G Standalone Available Now
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-infratel-gray leading-tight mb-6">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-infratel-gray leading-tight mb-4 sm:mb-6">
               Singapore's Most Reliable{' '}
               <span className="text-infratel-red">5G Standalone</span> Network
             </h1>
 
-            <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed">
               Experience ultra-fast speeds and seamless connectivity across the
               island. No hidden fees. No contracts.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <a
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8">
+              <Link
                 href="/plans"
-                className="inline-flex items-center justify-center px-8 py-4 bg-infratel-red text-white font-medium rounded-md hover:bg-infratel-red-dark transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-infratel-red text-white font-medium rounded-md hover:bg-infratel-red-dark transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 View Mobile Plans
                 <ArrowRight className="ml-2" size={20} />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/coverage"
-                className="inline-flex items-center justify-center px-8 py-4 bg-white text-infratel-gray font-medium rounded-md border-2 border-gray-200 hover:border-infratel-red hover:text-infratel-red transition-all"
+                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-white text-infratel-gray font-medium rounded-md border-2 border-gray-200 hover:border-infratel-red hover:text-infratel-red transition-all"
               >
                 <MapPin className="mr-2" size={20} />
                 Check Coverage
-              </a>
+              </Link>
             </div>
 
             {/* Trust Indicators */}
-            <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600">
+            <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-xs sm:text-sm text-gray-600">
               <div className="flex items-center">
                 <svg
-                  className="w-5 h-5 text-green-500 mr-2"
+                  className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mr-2 flex-shrink-0"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -63,11 +64,11 @@ export default function Hero() {
                     clipRule="evenodd"
                   />
                 </svg>
-                No Contract Required
+                <span className="whitespace-nowrap">No Contract Required</span>
               </div>
               <div className="flex items-center">
                 <svg
-                  className="w-5 h-5 text-green-500 mr-2"
+                  className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mr-2 flex-shrink-0"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -77,11 +78,11 @@ export default function Hero() {
                     clipRule="evenodd"
                   />
                 </svg>
-                Free SIM Delivery
+                <span className="whitespace-nowrap">Free SIM Delivery</span>
               </div>
               <div className="flex items-center">
                 <svg
-                  className="w-5 h-5 text-green-500 mr-2"
+                  className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mr-2 flex-shrink-0"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -91,13 +92,13 @@ export default function Hero() {
                     clipRule="evenodd"
                   />
                 </svg>
-                Port Your Number Free
+                <span className="whitespace-nowrap">Port Your Number Free</span>
               </div>
             </div>
           </div>
 
           {/* Right Visual - Abstract Singapore Constellation */}
-          <div className="relative h-[500px] pointer-events-none">
+          <div className="relative h-[300px] sm:h-[400px] lg:h-[500px] pointer-events-none hidden sm:block">
             <svg className="absolute inset-0 w-full h-full opacity-40" viewBox="0 0 600 500">
               {/* Abstract Marina Bay Sands - Left side, more prominent */}
               
