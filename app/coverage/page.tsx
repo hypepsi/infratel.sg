@@ -55,7 +55,7 @@ export default function CoveragePage() {
               <span className="font-semibold">99% Island-Wide Coverage</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-              Singapore's Most Reliable 5G Network
+              Comprehensive 5G Network Coverage
             </h1>
             <p className="text-xl text-white/90">
               Experience seamless connectivity across the entire island with our extensive 5G Standalone network.

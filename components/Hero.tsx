@@ -23,8 +23,8 @@ export default function Hero() {
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-infratel-gray leading-tight mb-4 sm:mb-6 animate-slide-up delay-100">
-              Singapore's Most Reliable{' '}
-              <span className="text-infratel-red text-shimmer">5G Standalone</span> Network
+              Next-Generation{' '}
+              <span className="text-infratel-red text-shimmer">5G Standalone</span> Network in Singapore
             </h1>
 
             <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed animate-slide-up delay-200">

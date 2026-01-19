@@ -27,9 +27,9 @@ export default function NewsroomPage() {
             <div className="space-y-8">
               <div className="bg-white rounded-xl p-8 shadow-lg">
                 <p className="text-sm text-gray-500 mb-2">28 July 2025</p>
-                <h3 className="text-2xl font-bold mb-3">Infratel Launches Singapore's Fastest 5G Network</h3>
+                <h3 className="text-2xl font-bold mb-3">Infratel Expands 5G Standalone Network Coverage</h3>
                 <p className="text-gray-600 mb-4">
-                  Infratel Communications officially launches its 5G Standalone network, offering speeds up to 1Gbps across 99% of Singapore...
+                  Infratel Communications continues to enhance its 5G Standalone network, delivering high-speed connectivity across Singapore...
                 </p>
                 <a href="#" className="text-infratel-red font-semibold hover:underline">
                   Read More →
@@ -38,9 +38,9 @@ export default function NewsroomPage() {
 
               <div className="bg-white rounded-xl p-8 shadow-lg">
                 <p className="text-sm text-gray-500 mb-2">15 July 2025</p>
-                <h3 className="text-2xl font-bold mb-3">Company Reaches 500,000 Subscribers Milestone</h3>
+                <h3 className="text-2xl font-bold mb-3">Growing Customer Base Across Singapore</h3>
                 <p className="text-gray-600 mb-4">
-                  Just months after launch, Infratel celebrates half a million happy customers across Singapore...
+                  Infratel continues to welcome new customers island-wide, offering flexible mobile plans and seamless connectivity...
                 </p>
                 <a href="#" className="text-infratel-red font-semibold hover:underline">
                   Read More →
@@ -49,9 +49,9 @@ export default function NewsroomPage() {
 
               <div className="bg-white rounded-xl p-8 shadow-lg">
                 <p className="text-sm text-gray-500 mb-2">01 July 2025</p>
-                <h3 className="text-2xl font-bold mb-3">Infratel Wins IMDA Digital Excellence Award</h3>
+                <h3 className="text-2xl font-bold mb-3">Infratel Focuses on Network Innovation</h3>
                 <p className="text-gray-600 mb-4">
-                  Recognized for innovation in telecommunications and customer service excellence...
+                  Continuing our commitment to telecommunications innovation and delivering quality customer service...
                 </p>
                 <a href="#" className="text-infratel-red font-semibold hover:underline">
                   Read More →

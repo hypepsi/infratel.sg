@@ -101,7 +101,7 @@ export default function PlansPage() {
               Choose Your Perfect Plan
             </h1>
             <p className="text-xl text-white/90">
-              No contracts. No hidden fees. Just transparent pricing for Singapore's best 5G network.
+              No contracts. No hidden fees. Just transparent pricing for premium 5G connectivity.
             </p>
           </div>
         </div>
