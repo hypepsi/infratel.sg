@@ -15,7 +15,7 @@ export default function AboutPage() {
               About Infratel
             </h1>
             <p className="text-xl text-white/90">
-              Singapore's fastest-growing mobile network operator, committed to delivering reliable connectivity for all Singaporeans.
+              A Singapore-based mobile network operator focused on delivering reliable 5G connectivity with transparent pricing.
             </p>
           </div>
         </div>
@@ -31,15 +31,15 @@ export default function AboutPage() {
             
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 leading-relaxed mb-6">
-                Founded in 2020, Infratel was born from a simple vision: to make high-quality mobile connectivity accessible and affordable for every Singaporean. As a homegrown telco, we understand the unique needs of our community.
+                Founded in 2025, Infratel Communications was established with a clear mission: to provide Singaporeans with transparent, affordable mobile connectivity without the complexity of traditional telco contracts.
               </p>
               
               <p className="text-gray-700 leading-relaxed mb-6">
-                In just a few years, we've grown from a startup to one of Singapore's most trusted mobile operators, serving over 500,000 customers across the island. Our success is built on three pillars: transparency, innovation, and customer-first service.
+                As a Mobile Virtual Network Operator (MVNO), we leverage existing network infrastructure to deliver 5G connectivity while focusing on what matters most – exceptional customer service and straightforward pricing with no hidden fees.
               </p>
               
               <p className="text-gray-700 leading-relaxed">
-                Today, we operate Singapore's fastest 5G Standalone network, covering 99% of the island with speeds that rival the world's best. But we're not stopping there – we're constantly investing in infrastructure and technology to ensure every Singaporean stays connected.
+                Our team is dedicated to simplifying mobile services. Whether you're a local resident or a business, we offer flexible plans designed to meet your connectivity needs. We believe great service shouldn't come with surprises on your bill.
               </p>
             </div>
           </div>
@@ -104,157 +104,140 @@ export default function AboutPage() {
             </h2>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white rounded-xl p-6 shadow-lg text-center">
+              <div className="bg-white rounded-xl p-6 shadow-lg text-center hover:shadow-xl transition-shadow">
                 <Users className="w-12 h-12 text-infratel-red mx-auto mb-4" />
-                <p className="text-4xl font-bold text-gray-900 mb-2">500K+</p>
-                <p className="text-gray-600">Happy Customers</p>
+                <p className="text-4xl font-bold text-gray-900 mb-2">24/7</p>
+                <p className="text-gray-600">Customer Support</p>
               </div>
 
-              <div className="bg-white rounded-xl p-6 shadow-lg text-center">
+              <div className="bg-white rounded-xl p-6 shadow-lg text-center hover:shadow-xl transition-shadow">
                 <Award className="w-12 h-12 text-infratel-red mx-auto mb-4" />
-                <p className="text-4xl font-bold text-gray-900 mb-2">#1</p>
-                <p className="text-gray-600">Customer Satisfaction</p>
+                <p className="text-4xl font-bold text-gray-900 mb-2">5G</p>
+                <p className="text-gray-600">Standalone Network</p>
               </div>
 
-              <div className="bg-white rounded-xl p-6 shadow-lg text-center">
+              <div className="bg-white rounded-xl p-6 shadow-lg text-center hover:shadow-xl transition-shadow">
                 <TrendingUp className="w-12 h-12 text-infratel-red mx-auto mb-4" />
-                <p className="text-4xl font-bold text-gray-900 mb-2">99%</p>
-                <p className="text-gray-600">Network Coverage</p>
+                <p className="text-4xl font-bold text-gray-900 mb-2">$0</p>
+                <p className="text-gray-600">Hidden Fees</p>
               </div>
 
-              <div className="bg-white rounded-xl p-6 shadow-lg text-center">
+              <div className="bg-white rounded-xl p-6 shadow-lg text-center hover:shadow-xl transition-shadow">
                 <Zap className="w-12 h-12 text-infratel-red mx-auto mb-4" />
-                <p className="text-4xl font-bold text-gray-900 mb-2">500+</p>
-                <p className="text-gray-600">5G Base Stations</p>
+                <p className="text-4xl font-bold text-gray-900 mb-2">1Gbps</p>
+                <p className="text-gray-600">Max Speed</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Awards */}
+      {/* Our Commitment */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-              Awards & Recognition
+              Our Commitment to You
             </h2>
             
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-8 text-center">
-                <div className="text-5xl mb-4">🏆</div>
+              <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl p-8 text-center hover:shadow-lg transition-shadow">
+                <div className="text-5xl mb-4">📱</div>
                 <h3 className="font-bold text-lg text-gray-900 mb-2">
-                  Best Mobile Network 2025
+                  No Contracts
                 </h3>
-                <p className="text-sm text-gray-600">Singapore Telecommunications Award</p>
+                <p className="text-sm text-gray-600">Stay because you want to, not because you have to. Cancel anytime.</p>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8 text-center">
-                <div className="text-5xl mb-4">⭐</div>
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8 text-center hover:shadow-lg transition-shadow">
+                <div className="text-5xl mb-4">💰</div>
                 <h3 className="font-bold text-lg text-gray-900 mb-2">
-                  Top Customer Service 2024
+                  Transparent Pricing
                 </h3>
-                <p className="text-sm text-gray-600">Consumer Choice Awards</p>
+                <p className="text-sm text-gray-600">What you see is what you pay. All prices include GST.</p>
               </div>
 
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-8 text-center">
-                <div className="text-5xl mb-4">🌟</div>
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-8 text-center hover:shadow-lg transition-shadow">
+                <div className="text-5xl mb-4">🤝</div>
                 <h3 className="font-bold text-lg text-gray-900 mb-2">
-                  Innovation Excellence 2024
+                  Real Support
                 </h3>
-                <p className="text-sm text-gray-600">IMDA Digital Excellence Awards</p>
+                <p className="text-sm text-gray-600">Talk to real people who care about solving your problems.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Leadership */}
+      {/* Contact Information */}
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-              Leadership Team
+              Get in Touch
             </h2>
             
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-                <div className="w-24 h-24 bg-gradient-to-br from-infratel-red to-red-600 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-3xl font-bold">
-                  TL
+            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Contact Us</h3>
+                  <div className="space-y-4 text-gray-600">
+                    <p className="flex items-center">
+                      <span className="w-8 h-8 bg-infratel-red/10 rounded-full flex items-center justify-center mr-3">📞</span>
+                      <a href="tel:+6589891397" className="hover:text-infratel-red transition-colors">+65 8989 1397</a>
+                    </p>
+                    <p className="flex items-center">
+                      <span className="w-8 h-8 bg-infratel-red/10 rounded-full flex items-center justify-center mr-3">✉️</span>
+                      <a href="mailto:info@infratel.sg" className="hover:text-infratel-red transition-colors">info@infratel.sg</a>
+                    </p>
+                    <p className="flex items-center">
+                      <span className="w-8 h-8 bg-infratel-red/10 rounded-full flex items-center justify-center mr-3">💬</span>
+                      <a href="https://wa.me/6589891397" className="hover:text-infratel-red transition-colors">WhatsApp Us</a>
+                    </p>
+                  </div>
                 </div>
-                <h3 className="font-bold text-lg text-gray-900 mb-1">
-                  Tan Li Wei
-                </h3>
-                <p className="text-infratel-red font-medium mb-2">Chief Executive Officer</p>
-                <p className="text-sm text-gray-600">
-                  Former Singtel executive with 15 years in telecommunications.
-                </p>
-              </div>
-
-              <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-                <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-3xl font-bold">
-                  KS
+                
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Office Address</h3>
+                  <div className="text-gray-600">
+                    <p className="font-medium">Infratel Communications Pte. Ltd.</p>
+                    <p>60 Paya Lebar Road, #11-53</p>
+                    <p>Paya Lebar Square</p>
+                    <p>Singapore 409051</p>
+                    <p className="mt-4 text-sm">
+                      <span className="font-medium">Hours:</span> Mon-Fri 9am - 6pm
+                    </p>
+                  </div>
                 </div>
-                <h3 className="font-bold text-lg text-gray-900 mb-1">
-                  Kumar Selvam
-                </h3>
-                <p className="text-infratel-red font-medium mb-2">Chief Technology Officer</p>
-                <p className="text-sm text-gray-600">
-                  Network architect who built Singapore's first 5G SA network.
-                </p>
-              </div>
-
-              <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-                <div className="w-24 h-24 bg-gradient-to-br from-green-500 to-green-600 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-3xl font-bold">
-                  MN
-                </div>
-                <h3 className="font-bold text-lg text-gray-900 mb-1">
-                  Michelle Ng
-                </h3>
-                <p className="text-infratel-red font-medium mb-2">Chief Customer Officer</p>
-                <p className="text-sm text-gray-600">
-                  Customer experience specialist passionate about service excellence.
-                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Community */}
+      {/* Company Details */}
       <section className="py-16 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">
-              Committed to Our Community
+            <h2 className="text-3xl font-bold mb-8">
+              Company Information
             </h2>
-            <p className="text-xl text-white/90 mb-8">
-              As a Singaporean company, we believe in giving back to the community that supports us.
-            </p>
             
-            <div className="grid md:grid-cols-3 gap-8 mt-12">
-              <div>
-                <p className="text-4xl font-bold mb-2">$2M+</p>
-                <p className="text-white/80">Donated to local charities</p>
-              </div>
-              <div>
-                <p className="text-4xl font-bold mb-2">10K+</p>
-                <p className="text-white/80">Students supported</p>
-              </div>
-              <div>
-                <p className="text-4xl font-bold mb-2">50+</p>
-                <p className="text-white/80">Community programs</p>
-              </div>
-            </div>
-
-            <div className="mt-12 pt-8 border-t border-white/20">
-              <h3 className="text-xl font-semibold mb-4">Company Details</h3>
-              <div className="text-white/80">
-                <p><strong>Infratel Communications Pte. Ltd.</strong></p>
+            <div className="bg-white/10 rounded-2xl p-8 backdrop-blur-sm">
+              <div className="text-white/90 space-y-2">
+                <p className="text-xl font-bold">Infratel Communications Pte. Ltd.</p>
                 <p>UEN: 202532622H</p>
-                <p>60 Paya Lebar Road, #11-53</p>
-                <p>Paya Lebar Square, Singapore 409051</p>
-                <p className="mt-4">Incorporated: 28 July 2025</p>
+                <p className="pt-4">60 Paya Lebar Road, #11-53</p>
+                <p>Paya Lebar Square</p>
+                <p>Singapore 409051</p>
+                <div className="pt-6 flex flex-col sm:flex-row justify-center gap-4">
+                  <a href="tel:+6589891397" className="inline-flex items-center justify-center px-6 py-3 bg-infratel-red text-white font-semibold rounded-lg hover:bg-red-700 transition-colors">
+                    📞 +65 8989 1397
+                  </a>
+                  <a href="mailto:info@infratel.sg" className="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
+                    ✉️ info@infratel.sg
+                  </a>
+                </div>
               </div>
             </div>
           </div>

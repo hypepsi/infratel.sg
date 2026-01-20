@@ -27,7 +27,7 @@ export default function ContactPage() {
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-3 gap-8 mb-16">
               {/* Phone */}
-              <div className="bg-white rounded-xl p-8 shadow-lg text-center hover:shadow-2xl transition-shadow">
+              <div className="bg-white rounded-xl p-8 shadow-lg text-center hover:shadow-2xl transition-shadow transform hover:-translate-y-1">
                 <div className="w-16 h-16 bg-infratel-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Phone className="w-8 h-8 text-infratel-red" />
                 </div>
@@ -37,14 +37,14 @@ export default function ContactPage() {
                 <p className="text-gray-600 mb-4">
                   Speak to our friendly team
                 </p>
-                <a href="tel:1800-888-8888" className="text-2xl font-bold text-infratel-red hover:text-red-700">
-                  1800-888-8888
+                <a href="tel:+6589891397" className="text-2xl font-bold text-infratel-red hover:text-red-700">
+                  +65 8989 1397
                 </a>
-                <p className="text-sm text-gray-500 mt-2">Toll-free from Singapore</p>
+                <p className="text-sm text-gray-500 mt-2">Mon-Sun 9am - 9pm</p>
               </div>
 
               {/* WhatsApp */}
-              <div className="bg-white rounded-xl p-8 shadow-lg text-center hover:shadow-2xl transition-shadow">
+              <div className="bg-white rounded-xl p-8 shadow-lg text-center hover:shadow-2xl transition-shadow transform hover:-translate-y-1">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <MessageCircle className="w-8 h-8 text-green-600" />
                 </div>
@@ -54,14 +54,14 @@ export default function ContactPage() {
                 <p className="text-gray-600 mb-4">
                   Chat with us instantly
                 </p>
-                <a href="https://wa.me/6588888888" className="text-2xl font-bold text-green-600 hover:text-green-700">
-                  +65 8888 8888
+                <a href="https://wa.me/6589891397" className="text-2xl font-bold text-green-600 hover:text-green-700">
+                  +65 8989 1397
                 </a>
-                <p className="text-sm text-gray-500 mt-2">Available 24/7</p>
+                <p className="text-sm text-gray-500 mt-2">Quick response guaranteed</p>
               </div>
 
               {/* Email */}
-              <div className="bg-white rounded-xl p-8 shadow-lg text-center hover:shadow-2xl transition-shadow">
+              <div className="bg-white rounded-xl p-8 shadow-lg text-center hover:shadow-2xl transition-shadow transform hover:-translate-y-1">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Mail className="w-8 h-8 text-blue-600" />
                 </div>
@@ -71,8 +71,8 @@ export default function ContactPage() {
                 <p className="text-gray-600 mb-4">
                   Send us a message
                 </p>
-                <a href="mailto:hello@infratel.sg" className="text-lg font-bold text-blue-600 hover:text-blue-700">
-                  hello@infratel.sg
+                <a href="mailto:info@infratel.sg" className="text-lg font-bold text-blue-600 hover:text-blue-700">
+                  info@infratel.sg
                 </a>
                 <p className="text-sm text-gray-500 mt-2">Response within 24 hours</p>
               </div>
@@ -200,67 +200,57 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Store Locations */}
+      {/* Office Location */}
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-              Visit Our Stores
+              Visit Our Office
             </h2>
             
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white rounded-xl p-6 shadow-lg">
-                <MapPin className="w-8 h-8 text-infratel-red mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  Orchard Gateway
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  277 Orchard Road<br />
-                  #01-12/13<br />
-                  Singapore 238858
-                </p>
-                <p className="text-sm text-gray-700 mb-1">
-                  <strong>Hours:</strong> 10am - 10pm daily
-                </p>
-                <p className="text-sm text-gray-700">
-                  <strong>Tel:</strong> 6123 4567
-                </p>
-              </div>
-
-              <div className="bg-white rounded-xl p-6 shadow-lg">
-                <MapPin className="w-8 h-8 text-infratel-red mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  VivoCity
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  1 HarbourFront Walk<br />
-                  #02-156<br />
-                  Singapore 098585
-                </p>
-                <p className="text-sm text-gray-700 mb-1">
-                  <strong>Hours:</strong> 10am - 10pm daily
-                </p>
-                <p className="text-sm text-gray-700">
-                  <strong>Tel:</strong> 6234 5678
-                </p>
-              </div>
-
-              <div className="bg-white rounded-xl p-6 shadow-lg">
-                <MapPin className="w-8 h-8 text-infratel-red mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  Tampines Mall
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  4 Tampines Central 5<br />
-                  #03-22<br />
-                  Singapore 529510
-                </p>
-                <p className="text-sm text-gray-700 mb-1">
-                  <strong>Hours:</strong> 10am - 10pm daily
-                </p>
-                <p className="text-sm text-gray-700">
-                  <strong>Tel:</strong> 6345 6789
-                </p>
+            <div className="bg-white rounded-xl p-8 shadow-lg">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <div className="flex items-start mb-4">
+                    <MapPin className="w-6 h-6 text-infratel-red mr-3 flex-shrink-0 mt-1" />
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">
+                        Paya Lebar Square (HQ)
+                      </h3>
+                      <p className="text-gray-600">
+                        60 Paya Lebar Road, #11-53<br />
+                        Paya Lebar Square<br />
+                        Singapore 409051
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center mb-2">
+                    <Clock className="w-5 h-5 text-infratel-red mr-3" />
+                    <p className="text-gray-700">Mon-Fri 9:00 AM - 6:00 PM</p>
+                  </div>
+                  <div className="flex items-center">
+                    <Phone className="w-5 h-5 text-infratel-red mr-3" />
+                    <a href="tel:+6589891397" className="text-infratel-red font-semibold hover:underline">
+                      +65 8989 1397
+                    </a>
+                  </div>
+                </div>
+                
+                <div className="bg-gray-50 rounded-lg p-6">
+                  <h4 className="font-semibold text-gray-900 mb-3">💡 Good to Know</h4>
+                  <ul className="text-sm text-gray-600 space-y-2">
+                    <li>• Most services can be done online or via WhatsApp</li>
+                    <li>• SIM cards are delivered free to your doorstep</li>
+                    <li>• Walk-ins are welcome but appointments preferred</li>
+                  </ul>
+                  <a 
+                    href="https://wa.me/6589891397" 
+                    className="inline-flex items-center mt-4 text-green-600 font-semibold hover:underline"
+                  >
+                    <MessageCircle className="w-5 h-5 mr-2" />
+                    Chat with us on WhatsApp
+                  </a>
+                </div>
               </div>
             </div>
           </div>

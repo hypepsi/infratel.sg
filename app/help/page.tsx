@@ -43,12 +43,12 @@ export default function HelpPage() {
                 </a>
               </div>
 
-              <div className="bg-white rounded-xl p-8 shadow-lg text-center">
+              <div className="bg-white rounded-xl p-8 shadow-lg text-center hover:shadow-xl transition-shadow">
                 <Phone className="w-12 h-12 text-infratel-red mx-auto mb-4" />
                 <h3 className="text-xl font-bold mb-2">Call Us</h3>
-                <p className="text-gray-600 mb-4">24/7 hotline support</p>
-                <a href="tel:18008888888" className="text-infratel-red font-semibold hover:underline">
-                  1800-888-8888 →
+                <p className="text-gray-600 mb-4">Mon-Sun 9am - 9pm</p>
+                <a href="tel:+6589891397" className="text-infratel-red font-semibold hover:underline">
+                  +65 8989 1397 →
                 </a>
               </div>
             </div>

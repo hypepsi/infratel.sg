@@ -1,26 +1,65 @@
+'use client'
+
+import { useState } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import { Mail, Lock, Smartphone } from 'lucide-react'
+import { Mail, Lock, Smartphone, AlertCircle, Eye, EyeOff } from 'lucide-react'
 
 export default function LoginPage() {
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [showPassword, setShowPassword] = useState(false)
+  const [error, setError] = useState('')
+  const [isLoading, setIsLoading] = useState(false)
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setError('')
+    
+    if (!email || !password) {
+      setError('Please fill in all fields')
+      return
+    }
+
+    setIsLoading(true)
+    
+    // Simulate login attempt
+    setTimeout(() => {
+      setError('Invalid email or password. Please try again.')
+      setIsLoading(false)
+    }, 1500)
+  }
+
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       <Header />
       
-      <section className="py-16">
+      <section className="py-12 sm:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-md mx-auto">
-            <div className="bg-white rounded-2xl shadow-xl p-8">
+            <div className="bg-white rounded-2xl shadow-xl p-8 animate-slide-up">
+              {/* Logo */}
               <div className="text-center mb-8">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-infratel-red/10 rounded-full mb-4">
+                  <span className="text-2xl font-bold text-infratel-red">I</span>
+                </div>
                 <h1 className="text-3xl font-bold text-gray-900 mb-2">
                   Welcome Back
                 </h1>
                 <p className="text-gray-600">
-                  Sign in to manage your account
+                  Sign in to manage your Infratel account
                 </p>
               </div>
 
-              <form className="space-y-6">
+              {/* Error Message */}
+              {error && (
+                <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-start">
+                  <AlertCircle className="w-5 h-5 text-red-500 mr-3 flex-shrink-0 mt-0.5" />
+                  <p className="text-sm text-red-700">{error}</p>
+                </div>
+              )}
+
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email or Mobile Number
@@ -32,7 +71,9 @@ export default function LoginPage() {
                     <input
                       type="text"
                       id="email"
-                      className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-infratel-red focus:border-transparent"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-infratel-red focus:border-transparent transition-all"
                       placeholder="you@example.com or +65 9123 4567"
                     />
                   </div>
@@ -47,32 +88,56 @@ export default function LoginPage() {
                       <Lock className="h-5 w-5 text-gray-400" />
                     </div>
                     <input
-                      type="password"
+                      type={showPassword ? 'text' : 'password'}
                       id="password"
-                      className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-infratel-red focus:border-transparent"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      className="block w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-infratel-red focus:border-transparent transition-all"
                       placeholder="Enter your password"
                     />
+                    <button
+                      type="button"
+                      onClick={() => setShowPassword(!showPassword)}
+                      className="absolute inset-y-0 right-0 pr-3 flex items-center"
+                    >
+                      {showPassword ? (
+                        <EyeOff className="h-5 w-5 text-gray-400 hover:text-gray-600" />
+                      ) : (
+                        <Eye className="h-5 w-5 text-gray-400 hover:text-gray-600" />
+                      )}
+                    </button>
                   </div>
                 </div>
 
                 <div className="flex items-center justify-between">
-                  <label className="flex items-center">
+                  <label className="flex items-center cursor-pointer">
                     <input
                       type="checkbox"
                       className="h-4 w-4 text-infratel-red focus:ring-infratel-red border-gray-300 rounded"
                     />
                     <span className="ml-2 text-sm text-gray-700">Remember me</span>
                   </label>
-                  <a href="/forgot-password" className="text-sm text-infratel-red hover:text-red-700">
+                  <a href="/contact" className="text-sm text-infratel-red hover:text-red-700 transition-colors">
                     Forgot password?
                   </a>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full py-3 px-4 bg-infratel-red text-white font-semibold rounded-lg hover:bg-red-700 transition-colors"
+                  disabled={isLoading}
+                  className="w-full py-3 px-4 bg-infratel-red text-white font-semibold rounded-lg hover:bg-red-700 transition-all transform hover:scale-[1.02] disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center"
                 >
-                  Sign In
+                  {isLoading ? (
+                    <>
+                      <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      Signing in...
+                    </>
+                  ) : (
+                    'Sign In'
+                  )}
                 </button>
               </form>
 
@@ -87,7 +152,7 @@ export default function LoginPage() {
                 </div>
 
                 <div className="mt-6 grid grid-cols-2 gap-4">
-                  <button className="flex items-center justify-center px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+                  <button className="flex items-center justify-center px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 hover:border-gray-400 transition-all">
                     <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24">
                       <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                       <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
@@ -97,8 +162,8 @@ export default function LoginPage() {
                     Google
                   </button>
                   
-                  <button className="flex items-center justify-center px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
-                    <Smartphone className="w-5 h-5 mr-2 text-gray-700" />
+                  <button className="flex items-center justify-center px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 hover:border-gray-400 transition-all">
+                    <Smartphone className="w-5 h-5 mr-2 text-red-600" />
                     Singpass
                   </button>
                 </div>
@@ -106,15 +171,15 @@ export default function LoginPage() {
 
               <p className="mt-8 text-center text-sm text-gray-600">
                 Don't have an account?{' '}
-                <a href="/plans" className="font-medium text-infratel-red hover:text-red-700">
-                  Sign up for free
+                <a href="/signup" className="font-medium text-infratel-red hover:text-red-700 transition-colors">
+                  Sign up for a plan
                 </a>
               </p>
             </div>
 
-            <div className="mt-6 text-center">
+            <div className="mt-6 text-center space-y-2">
               <p className="text-sm text-gray-600">
-                Need help? <a href="/contact" className="text-infratel-red hover:text-red-700">Contact Support</a>
+                Need help? <a href="https://wa.me/6589891397" className="text-infratel-red hover:text-red-700">WhatsApp us</a> or call <a href="tel:+6589891397" className="text-infratel-red hover:text-red-700">+65 8989 1397</a>
               </p>
             </div>
           </div>

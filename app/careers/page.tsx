@@ -15,7 +15,7 @@ export default function CareersPage() {
               Join Our Team
             </h1>
             <p className="text-xl text-white/90">
-              Build the future of connectivity with Singapore's fastest-growing telco.
+              Help us build a better mobile experience for Singaporeans.
             </p>
           </div>
         </div>
@@ -50,28 +50,23 @@ export default function CareersPage() {
 
             <div className="bg-white rounded-xl p-8 shadow-lg mb-8">
               <h3 className="text-2xl font-bold mb-6">Open Positions</h3>
-              <div className="space-y-4">
-                <div className="border-b pb-4">
-                  <h4 className="font-semibold text-lg mb-2">Network Engineer</h4>
-                  <p className="text-gray-600 mb-2">Engineering · Full-time · Singapore</p>
-                  <button className="px-4 py-2 bg-infratel-red text-white rounded-lg hover:bg-red-700">
-                    Apply Now
-                  </button>
+              <div className="text-center py-8">
+                <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Briefcase className="w-8 h-8 text-gray-400" />
                 </div>
-                <div className="border-b pb-4">
-                  <h4 className="font-semibold text-lg mb-2">Customer Service Representative</h4>
-                  <p className="text-gray-600 mb-2">Customer Support · Full-time · Singapore</p>
-                  <button className="px-4 py-2 bg-infratel-red text-white rounded-lg hover:bg-red-700">
-                    Apply Now
-                  </button>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-lg mb-2">Marketing Manager</h4>
-                  <p className="text-gray-600 mb-2">Marketing · Full-time · Singapore</p>
-                  <button className="px-4 py-2 bg-infratel-red text-white rounded-lg hover:bg-red-700">
-                    Apply Now
-                  </button>
-                </div>
+                <h4 className="text-xl font-semibold text-gray-700 mb-2">No Open Positions</h4>
+                <p className="text-gray-600 mb-6">
+                  We're not actively hiring at the moment, but we're always interested in hearing from talented individuals.
+                </p>
+                <a 
+                  href="mailto:careers@infratel.sg" 
+                  className="inline-flex items-center px-6 py-3 bg-infratel-red text-white font-semibold rounded-lg hover:bg-red-700 transition-colors"
+                >
+                  Send Your Resume
+                </a>
+                <p className="text-sm text-gray-500 mt-3">
+                  Email us at careers@infratel.sg
+                </p>
               </div>
             </div>
           </div>

@@ -24,55 +24,28 @@ export default function InvestorsPage() {
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-              <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-                <p className="text-3xl font-bold text-infratel-red mb-2">500K+</p>
-                <p className="text-gray-600">Active Subscribers</p>
-              </div>
-              <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-                <p className="text-3xl font-bold text-infratel-red mb-2">99%</p>
-                <p className="text-gray-600">Network Coverage</p>
-              </div>
-              <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-                <p className="text-3xl font-bold text-infratel-red mb-2">500+</p>
-                <p className="text-gray-600">5G Base Stations</p>
-              </div>
-              <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-                <p className="text-3xl font-bold text-infratel-red mb-2">2025</p>
-                <p className="text-gray-600">Established</p>
+            <div className="bg-white rounded-xl p-8 shadow-lg mb-8">
+              <div className="text-center py-8">
+                <TrendingUp className="w-16 h-16 text-infratel-red mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Private Company</h3>
+                <p className="text-gray-600 max-w-2xl mx-auto mb-6">
+                  Infratel Communications Pte. Ltd. is a private limited company incorporated in Singapore. 
+                  As a private company, we do not publish public financial reports.
+                </p>
+                <p className="text-gray-600">
+                  For partnership or investment enquiries, please contact us directly.
+                </p>
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white rounded-xl p-8 shadow-lg">
-                <FileText className="w-12 h-12 text-infratel-red mb-4" />
-                <h3 className="text-2xl font-bold mb-4">Financial Reports</h3>
-                <ul className="space-y-3">
-                  <li>
-                    <a href="#" className="text-infratel-red hover:underline">Annual Report 2025</a>
-                    <p className="text-sm text-gray-600">Published: Coming Soon</p>
-                  </li>
-                  <li>
-                    <a href="#" className="text-infratel-red hover:underline">Q4 2025 Results</a>
-                    <p className="text-sm text-gray-600">Published: Coming Soon</p>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-white rounded-xl p-8 shadow-lg">
-                <Calendar className="w-12 h-12 text-infratel-red mb-4" />
-                <h3 className="text-2xl font-bold mb-4">Corporate Calendar</h3>
-                <ul className="space-y-3">
-                  <li>
-                    <p className="font-semibold">AGM 2026</p>
-                    <p className="text-sm text-gray-600">Date: To be announced</p>
-                  </li>
-                  <li>
-                    <p className="font-semibold">Q1 2026 Results</p>
-                    <p className="text-sm text-gray-600">Date: To be announced</p>
-                  </li>
-                </ul>
-              </div>
+            <div className="bg-gradient-to-r from-infratel-red to-red-600 rounded-xl p-8 text-white text-center">
+              <h3 className="text-2xl font-bold mb-4">Interested in Partnership?</h3>
+              <p className="text-white/90 mb-6">
+                We're open to discussing partnership opportunities with like-minded businesses.
+              </p>
+              <a href="mailto:business@infratel.sg" className="inline-flex items-center px-6 py-3 bg-white text-infratel-red font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+                Contact Business Development
+              </a>
             </div>
 
             <div className="mt-8 bg-white rounded-xl p-8 shadow-lg">

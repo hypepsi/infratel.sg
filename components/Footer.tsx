@@ -16,10 +16,14 @@ export default function Footer() {
               </span>
               <span className="text-sm text-gray-400">.sg</span>
             </div>
-            <p className="text-gray-400 text-sm mb-6">
-              Singapore's most reliable 5G network. Experience the future of
-              connectivity today.
+            <p className="text-gray-400 text-sm mb-4">
+              Next-generation 5G connectivity in Singapore. Experience the future of
+              mobile communications.
             </p>
+            <div className="text-gray-400 text-sm space-y-1 mb-4">
+              <p><a href="tel:+6589891397" className="hover:text-white transition-colors">+65 8989 1397</a></p>
+              <p><a href="mailto:info@infratel.sg" className="hover:text-white transition-colors">info@infratel.sg</a></p>
+            </div>
             {/* Social Icons */}
             <div className="flex space-x-4">
               <a

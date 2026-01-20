@@ -15,7 +15,7 @@ export default function DevicesPage() {
               Latest Devices
             </h1>
             <p className="text-xl text-white/90">
-              Get the newest smartphones, tablets, and wearables with our flexible plans.
+              Use your existing device or get a new one from our recommended partners.
             </p>
           </div>
         </div>
@@ -23,38 +23,66 @@ export default function DevicesPage() {
 
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-              Popular Devices
-            </h2>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-                <Smartphone className="w-16 h-16 text-infratel-red mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2">Smartphones</h3>
-                <p className="text-gray-600 mb-4">Latest iPhone and Android devices</p>
-                <button className="px-6 py-2 bg-infratel-red text-white rounded-lg hover:bg-red-700">
-                  Browse Phones
-                </button>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg text-center">
+              <div className="w-20 h-20 bg-infratel-red/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Smartphone className="w-10 h-10 text-infratel-red" />
               </div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Bring Your Own Device
+              </h2>
+              <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
+                Use any unlocked 5G-compatible device with Infratel. We support all major smartphone brands including iPhone and Samsung.
+              </p>
+              
+              <div className="bg-gray-50 rounded-xl p-6 mb-8">
+                <h3 className="font-semibold text-gray-900 mb-4">Compatible Devices Include:</h3>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm text-gray-600">
+                  <div>
+                    <p className="font-medium text-gray-900 mb-2">Apple</p>
+                    <p>iPhone 11 and newer</p>
+                  </div>
+                  <div>
+                    <p className="font-medium text-gray-900 mb-2">Samsung</p>
+                    <p>Galaxy S20 and newer</p>
+                  </div>
+                  <div>
+                    <p className="font-medium text-gray-900 mb-2">Google</p>
+                    <p>Pixel 4 and newer</p>
+                  </div>
+                  <div>
+                    <p className="font-medium text-gray-900 mb-2">Others</p>
+                    <p>Any 5G device</p>
+                  </div>
+                </div>
+              </div>
+              
+              <p className="text-gray-600 mb-6">
+                Need a new device? We recommend purchasing from authorized retailers:
+              </p>
+              
+              <div className="flex flex-wrap justify-center gap-4">
+                <a href="https://www.apple.com/sg" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-gray-100 text-gray-700 font-medium rounded-lg hover:bg-gray-200 transition-colors">
+                  Apple Store
+                </a>
+                <a href="https://www.samsung.com/sg" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-gray-100 text-gray-700 font-medium rounded-lg hover:bg-gray-200 transition-colors">
+                  Samsung
+                </a>
+                <a href="https://www.lazada.sg" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-gray-100 text-gray-700 font-medium rounded-lg hover:bg-gray-200 transition-colors">
+                  Lazada
+                </a>
+                <a href="https://shopee.sg" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-gray-100 text-gray-700 font-medium rounded-lg hover:bg-gray-200 transition-colors">
+                  Shopee
+                </a>
+              </div>
+            </div>
 
-              <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-                <Tablet className="w-16 h-16 text-infratel-red mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2">Tablets</h3>
-                <p className="text-gray-600 mb-4">iPads and Android tablets</p>
-                <button className="px-6 py-2 bg-infratel-red text-white rounded-lg hover:bg-red-700">
-                  Browse Tablets
-                </button>
-              </div>
-
-              <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-                <Watch className="w-16 h-16 text-infratel-red mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2">Wearables</h3>
-                <p className="text-gray-600 mb-4">Smartwatches and accessories</p>
-                <button className="px-6 py-2 bg-infratel-red text-white rounded-lg hover:bg-red-700">
-                  Browse Wearables
-                </button>
-              </div>
+            <div className="mt-8 bg-gradient-to-r from-infratel-red to-red-600 rounded-xl p-8 text-white text-center">
+              <h3 className="text-2xl font-bold mb-3">Ready to Get Started?</h3>
+              <p className="text-white/90 mb-6">Choose a plan and we'll deliver your SIM card for free.</p>
+              <a href="/plans" className="inline-block px-8 py-3 bg-white text-infratel-red font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+                View Mobile Plans
+              </a>
             </div>
           </div>
         </div>

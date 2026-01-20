@@ -1,51 +1,16 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import { MapPin, Clock, Phone } from 'lucide-react'
+import { MapPin, Clock, Phone, MessageCircle, Mail } from 'lucide-react'
 
 export default function StoresPage() {
   const stores = [
     {
-      name: 'Paya Lebar Square',
+      name: 'Paya Lebar Square (HQ)',
       address: '60 Paya Lebar Road, #11-53',
       postal: 'Singapore 409051',
-      hours: '10:00 AM - 10:00 PM Daily',
-      phone: '6123 4567',
+      hours: 'Mon-Fri 9:00 AM - 6:00 PM',
+      phone: '+65 8989 1397',
       isHQ: true
-    },
-    {
-      name: 'Orchard Gateway',
-      address: '277 Orchard Road, #01-12/13',
-      postal: 'Singapore 238858',
-      hours: '10:00 AM - 10:00 PM Daily',
-      phone: '6123 4568'
-    },
-    {
-      name: 'VivoCity',
-      address: '1 HarbourFront Walk, #02-156',
-      postal: 'Singapore 098585',
-      hours: '10:00 AM - 10:00 PM Daily',
-      phone: '6234 5678'
-    },
-    {
-      name: 'Tampines Mall',
-      address: '4 Tampines Central 5, #03-22',
-      postal: 'Singapore 529510',
-      hours: '10:00 AM - 10:00 PM Daily',
-      phone: '6345 6789'
-    },
-    {
-      name: 'Jurong Point',
-      address: '1 Jurong West Central 2, #02-35',
-      postal: 'Singapore 648886',
-      hours: '10:00 AM - 10:00 PM Daily',
-      phone: '6456 7890'
-    },
-    {
-      name: 'Bugis Junction',
-      address: '200 Victoria Street, #01-48',
-      postal: 'Singapore 188021',
-      hours: '10:00 AM - 10:00 PM Daily',
-      phone: '6567 8901'
     }
   ]
 
@@ -113,10 +78,27 @@ export default function StoresPage() {
             </div>
 
             <div className="mt-12 bg-blue-50 border border-blue-200 rounded-lg p-6 text-center">
-              <h3 className="font-semibold text-blue-900 mb-2">Walk-in Services</h3>
+              <h3 className="font-semibold text-blue-900 mb-2">Available Services</h3>
               <p className="text-blue-800">
-                New activations • SIM replacement • Bill payments • Device purchases • Technical support
+                New activations • SIM card collection • Plan changes • Technical support • General enquiries
               </p>
+            </div>
+
+            <div className="mt-8 bg-gradient-to-r from-infratel-red to-red-600 text-white rounded-xl p-8 text-center">
+              <h3 className="text-2xl font-bold mb-3">Prefer Online Service?</h3>
+              <p className="text-white/90 mb-4">
+                Most services can be completed online or via WhatsApp. No need to visit our office!
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://wa.me/6589891397" className="inline-flex items-center justify-center px-6 py-3 bg-white text-infratel-red font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  WhatsApp Us
+                </a>
+                <a href="mailto:info@infratel.sg" className="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
+                  <Mail className="w-5 h-5 mr-2" />
+                  Email Us
+                </a>
+              </div>
             </div>
           </div>
         </div>
