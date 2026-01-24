@@ -1,6 +1,6 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import { Check, X, Zap, Globe, Phone, MessageSquare, Download, Upload } from 'lucide-react'
+import { Check, X, Zap, Globe, Phone, MessageSquare, Download, Upload, GraduationCap, Rocket, Plane } from 'lucide-react'
 
 export default function PlansPage() {
   const plans = [
@@ -17,6 +17,10 @@ export default function PlansPage() {
       sms: 'Unlimited',
       roaming: '1GB',
       contract: 'No contract',
+      icon: GraduationCap,
+      gradient: 'from-blue-500 to-cyan-400',
+      iconBg: 'bg-blue-100',
+      iconColor: 'text-blue-600',
       features: [
         'Free incoming calls',
         'Free SIM delivery',
@@ -45,6 +49,10 @@ export default function PlansPage() {
       sms: 'Unlimited',
       roaming: '5GB',
       contract: 'No contract',
+      icon: Rocket,
+      gradient: 'from-infratel-red to-rose-500',
+      iconBg: 'bg-red-100',
+      iconColor: 'text-infratel-red',
       features: [
         '100GB high-speed data',
         '5G Standalone access',
@@ -72,6 +80,10 @@ export default function PlansPage() {
       sms: 'Unlimited',
       roaming: '20GB',
       contract: 'No contract',
+      icon: Plane,
+      gradient: 'from-purple-500 to-indigo-500',
+      iconBg: 'bg-purple-100',
+      iconColor: 'text-purple-600',
       features: [
         'Unlimited local data',
         '5G Standalone access',
@@ -111,26 +123,45 @@ export default function PlansPage() {
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {plans.map((plan, index) => (
+            {plans.map((plan, index) => {
+              const IconComponent = plan.icon
+              return (
               <div
                 key={index}
                 className={`relative bg-white rounded-2xl shadow-lg overflow-hidden transition-transform hover:scale-105 ${
                   plan.highlight ? 'ring-4 ring-infratel-red shadow-2xl' : ''
                 }`}
               >
-                {plan.highlight && (
-                  <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-infratel-red to-red-600 text-white text-center py-2 text-sm font-semibold">
-                    ⭐ {plan.badge}
+                {/* Decorative Header */}
+                <div className="relative">
+                  <div className={`h-32 bg-gradient-to-br ${plan.gradient} overflow-hidden`}>
+                    {/* Background Pattern */}
+                    <div className="absolute inset-0 opacity-20">
+                      <div className="absolute top-0 right-0 w-32 h-32 bg-white rounded-full -translate-y-1/2 translate-x-1/2" />
+                      <div className="absolute bottom-0 left-0 w-24 h-24 bg-white rounded-full translate-y-1/2 -translate-x-1/2" />
+                    </div>
+                    
+                    {/* Badge */}
+                    {plan.badge && (
+                      <span className={`absolute top-4 right-4 text-xs font-semibold px-3 py-1 rounded-full ${
+                        plan.highlight 
+                          ? 'bg-white text-infratel-red' 
+                          : 'bg-white/90 text-gray-700'
+                      }`}>
+                        {plan.highlight && '⭐ '}{plan.badge}
+                      </span>
+                    )}
                   </div>
-                )}
-                
-                <div className={`p-8 ${plan.highlight ? 'pt-14' : ''}`}>
-                  {!plan.highlight && plan.badge && (
-                    <span className="inline-block bg-gray-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">
-                      {plan.badge}
-                    </span>
-                  )}
                   
+                  {/* Icon - Outside the overflow-hidden container */}
+                  <div className="absolute bottom-0 left-8 translate-y-1/2 z-10">
+                    <div className={`w-16 h-16 ${plan.iconBg} rounded-2xl shadow-lg flex items-center justify-center`}>
+                      <IconComponent className={`w-8 h-8 ${plan.iconColor}`} />
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="p-8 pt-12">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                   <p className="text-gray-600 mb-6">{plan.description}</p>
                   
@@ -209,7 +240,7 @@ export default function PlansPage() {
                   </a>
                 </div>
               </div>
-            ))}
+            )})}
           </div>
         </div>
       </section>

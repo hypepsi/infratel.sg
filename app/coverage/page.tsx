@@ -46,62 +46,66 @@ export default function CoveragePage() {
     <main className="min-h-screen bg-gray-50">
       <Header />
       
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-infratel-red to-red-600 text-white py-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm mb-6">
-              <Signal className="w-5 h-5 mr-2" />
-              <span className="font-semibold">99% Island-Wide Coverage</span>
+      {/* Hero with Map - Combined Section */}
+      <section className="relative">
+        {/* Map Background */}
+        <div className="absolute inset-0 z-0">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127641.05676058498!2d103.77766573281249!3d1.3139961000000013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da11238a8b9375%3A0x887869cf52abf5c4!2sSingapore!5e0!3m2!1sen!2ssg!4v1706000000000!5m2!1sen!2ssg"
+            width="100%"
+            height="100%"
+            style={{ border: 0, filter: 'grayscale(30%) brightness(0.95)' }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="w-full h-full"
+          ></iframe>
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-transparent"></div>
+        </div>
+        
+        {/* Content */}
+        <div className="relative z-10 py-20 lg:py-28">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white mb-6">
+                <Signal className="w-5 h-5 mr-2" />
+                <span className="font-semibold">99% Island-Wide Coverage</span>
+              </div>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white">
+                5G Network Coverage
+              </h1>
+              <p className="text-xl text-white/90 mb-8 max-w-2xl">
+                Experience seamless connectivity across the entire island. Our network reaches every corner of Singapore.
+              </p>
+              
+              {/* Stats Row */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 text-center border border-white/20">
+                  <p className="text-3xl font-bold text-white mb-1">99%</p>
+                  <p className="text-white/80 text-sm">5G Coverage</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 text-center border border-white/20">
+                  <p className="text-3xl font-bold text-white mb-1">500+</p>
+                  <p className="text-white/80 text-sm">5G Sites</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 text-center border border-white/20">
+                  <p className="text-3xl font-bold text-white mb-1">100%</p>
+                  <p className="text-white/80 text-sm">MRT Coverage</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 text-center border border-white/20">
+                  <p className="text-3xl font-bold text-white mb-1">95%</p>
+                  <p className="text-white/80 text-sm">Indoor</p>
+                </div>
+              </div>
             </div>
-            <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-              Comprehensive 5G Network Coverage
-            </h1>
-            <p className="text-xl text-white/90">
-              Experience seamless connectivity across the entire island with our extensive 5G Standalone network.
-            </p>
           </div>
         </div>
+        
+        {/* Bottom fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-gray-50 to-transparent z-10"></div>
       </section>
-
-      {/* Coverage Stats */}
-      <section className="py-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-              <div className="w-12 h-12 bg-infratel-red/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Signal className="w-6 h-6 text-infratel-red" />
-              </div>
-              <p className="text-3xl font-bold text-gray-900 mb-2">99%</p>
-              <p className="text-gray-600">Coverage</p>
-            </div>
-            
-            <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-              <div className="w-12 h-12 bg-infratel-red/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Wifi className="w-6 h-6 text-infratel-red" />
-              </div>
-              <p className="text-3xl font-bold text-gray-900 mb-2">500+</p>
-              <p className="text-gray-600">5G Sites</p>
-            </div>
-            
-            <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-              <div className="w-12 h-12 bg-infratel-red/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-6 h-6 text-infratel-red" />
-              </div>
-              <p className="text-3xl font-bold text-gray-900 mb-2">100%</p>
-              <p className="text-gray-600">MRT Coverage</p>
-            </div>
-            
-            <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-              <div className="w-12 h-12 bg-infratel-red/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Building2 className="w-6 h-6 text-infratel-red" />
-              </div>
-              <p className="text-3xl font-bold text-gray-900 mb-2">95%</p>
-              <p className="text-gray-600">Indoor Coverage</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Key Locations */}
       <section className="py-16 bg-white">
@@ -175,40 +179,6 @@ export default function CoveragePage() {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Interactive Map Placeholder */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              Interactive Coverage Map
-            </h2>
-            
-            <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl p-12 text-center">
-              <MapPin className="w-16 h-16 text-infratel-red mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                Check Your Area
-              </h3>
-              <p className="text-gray-600 mb-6 max-w-lg mx-auto">
-                Enter your postal code or address to see detailed coverage information for your specific location.
-              </p>
-              
-              <div className="max-w-md mx-auto">
-                <div className="flex gap-2">
-                  <input
-                    type="text"
-                    placeholder="Enter postal code or address"
-                    className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-infratel-red"
-                  />
-                  <button className="px-6 py-3 bg-infratel-red text-white font-semibold rounded-lg hover:bg-red-700 transition-colors">
-                    Check
-                  </button>
-                </div>
-              </div>
             </div>
           </div>
         </div>

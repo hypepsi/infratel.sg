@@ -340,4 +340,297 @@
   .animate-number-roll {
     animation: number-roll 0.6s ease-out;
   }
+
+  /* ===== 发光效果 ===== */
+  .glow-red {
+    box-shadow: 0 0 20px rgba(230, 0, 35, 0.3), 0 0 40px rgba(230, 0, 35, 0.2), 0 0 60px rgba(230, 0, 35, 0.1);
+  }
+
+  .glow-red-hover:hover {
+    box-shadow: 0 0 30px rgba(230, 0, 35, 0.4), 0 0 60px rgba(230, 0, 35, 0.3), 0 0 90px rgba(230, 0, 35, 0.2);
+  }
+
+  /* ===== 流光边框 ===== */
+  @keyframes border-flow {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .border-flow {
+    background: linear-gradient(90deg, #E60023, #FF4458, #E60023, #FF4458);
+    background-size: 300% 300%;
+    animation: border-flow 3s ease infinite;
+  }
+
+  /* ===== 粒子上升动画 ===== */
+  @keyframes particle-rise {
+    0% {
+      transform: translateY(100%) scale(0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100vh) scale(1);
+      opacity: 0;
+    }
+  }
+
+  .particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: linear-gradient(135deg, #E60023, #FF4458);
+    border-radius: 50%;
+    animation: particle-rise linear infinite;
+  }
+
+  /* ===== 波纹扩散 ===== */
+  @keyframes ripple {
+    0% {
+      transform: scale(1);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+
+  .ripple {
+    animation: ripple 2s ease-out infinite;
+  }
+
+  /* ===== 3D 卡片悬停 ===== */
+  .card-3d {
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+  }
+
+  .card-3d:hover {
+    transform: perspective(1000px) rotateY(-5deg) rotateX(5deg) scale(1.02);
+  }
+
+  /* ===== 霓虹文字 ===== */
+  .neon-text {
+    text-shadow: 
+      0 0 5px #E60023,
+      0 0 10px #E60023,
+      0 0 20px #E60023,
+      0 0 40px #FF4458;
+  }
+
+  /* ===== 弹跳动画 ===== */
+  @keyframes bounce-gentle {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-bounce-gentle {
+    animation: bounce-gentle 2s ease-in-out infinite;
+  }
+
+  /* ===== 闪烁星星 ===== */
+  @keyframes twinkle {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.3;
+      transform: scale(0.8);
+    }
+  }
+
+  .animate-twinkle {
+    animation: twinkle 2s ease-in-out infinite;
+  }
+
+  /* ===== 打字机效果 ===== */
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+
+  .typing {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s steps(30, end);
+  }
+
+  /* ===== 雷达扫描 ===== */
+  @keyframes radar {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-radar {
+    animation: radar 4s linear infinite;
+  }
+
+  /* ===== 信号波 ===== */
+  @keyframes signal-wave {
+    0% {
+      transform: scale(0.5);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+
+  .signal-wave {
+    animation: signal-wave 2s ease-out infinite;
+  }
+
+  /* ===== 渐变流动背景 ===== */
+  @keyframes gradient-flow {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+
+  .gradient-flow-bg {
+    background: linear-gradient(
+      -45deg,
+      #E60023,
+      #FF4458,
+      #1a1a1a,
+      #E60023
+    );
+    background-size: 400% 400%;
+    animation: gradient-flow 15s ease infinite;
+  }
+
+  /* ===== 鼠标跟随光效 ===== */
+  .spotlight {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .spotlight::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(230, 0, 35, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .spotlight:hover::after {
+    opacity: 1;
+  }
+
+  /* ===== 悬浮阴影加深 ===== */
+  .shadow-hover {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .shadow-hover:hover {
+    box-shadow: 
+      0 25px 50px -12px rgba(0, 0, 0, 0.25),
+      0 0 0 1px rgba(230, 0, 35, 0.1);
+  }
+
+  /* ===== 图标旋转悬停 ===== */
+  .icon-spin-hover {
+    transition: transform 0.5s ease;
+  }
+
+  .icon-spin-hover:hover {
+    transform: rotate(360deg);
+  }
+
+  /* ===== 下划线动画 ===== */
+  .underline-animate {
+    position: relative;
+  }
+
+  .underline-animate::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #E60023, #FF4458);
+    transition: width 0.3s ease;
+  }
+
+  .underline-animate:hover::after {
+    width: 100%;
+  }
+
+  /* ===== 缩放脉冲 ===== */
+  @keyframes scale-pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+
+  .animate-scale-pulse {
+    animation: scale-pulse 3s ease-in-out infinite;
+  }
+
+  /* ===== 闪电效果 ===== */
+  @keyframes flash {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  .animate-flash {
+    animation: flash 0.5s ease-in-out infinite;
+  }
+
+  /* ===== 渐变文字动画 ===== */
+  @keyframes gradient-text {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .gradient-text-animate {
+    background: linear-gradient(90deg, #E60023, #FF4458, #E60023);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-text 3s ease infinite;
+  }
 }

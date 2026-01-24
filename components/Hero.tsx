@@ -4,7 +4,7 @@ import { ArrowRight, MapPin } from 'lucide-react'
 export default function Hero() {
   return (
     <section className="relative bg-gradient-to-br from-gray-50 to-white py-12 sm:py-16 lg:py-20 overflow-hidden">
-      {/* Unified subtle grid background across entire hero */}
+      {/* Animated Grid Background */}
       <div className="absolute inset-0 opacity-5" style={{
         backgroundImage: `
           linear-gradient(to right, #9CA3AF 1px, transparent 1px),
@@ -12,6 +12,22 @@ export default function Hero() {
         `,
         backgroundSize: '60px 60px'
       }}></div>
+
+      {/* Floating Particles */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="particle" style={{ left: '10%', animationDuration: '8s', animationDelay: '0s' }}></div>
+        <div className="particle" style={{ left: '20%', animationDuration: '12s', animationDelay: '2s' }}></div>
+        <div className="particle" style={{ left: '35%', animationDuration: '10s', animationDelay: '1s' }}></div>
+        <div className="particle" style={{ left: '50%', animationDuration: '14s', animationDelay: '3s' }}></div>
+        <div className="particle" style={{ left: '65%', animationDuration: '9s', animationDelay: '0.5s' }}></div>
+        <div className="particle" style={{ left: '80%', animationDuration: '11s', animationDelay: '2.5s' }}></div>
+        <div className="particle" style={{ left: '90%', animationDuration: '13s', animationDelay: '1.5s' }}></div>
+      </div>
+
+      {/* Decorative Circles */}
+      <div className="absolute top-20 left-10 w-64 h-64 bg-infratel-red/5 rounded-full blur-3xl animate-breathe"></div>
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-infratel-red/5 rounded-full blur-3xl animate-breathe" style={{ animationDelay: '2s' }}></div>
+      
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -103,9 +119,10 @@ export default function Hero() {
           <div className="relative h-[300px] sm:h-[400px] lg:h-[500px] hidden sm:block animate-slide-in-right delay-200">
             <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="/images/hero-5g-singapore.png"
-                alt="5G Network in Singapore - Woman using smartphone with Marina Bay Sands skyline"
-                className="w-full h-full object-cover object-center"
+                src="/images/hero-5g-singapore-v2.png"
+                alt="5G Network in Singapore - Man using smartphone with Marina Bay Sands skyline"
+                className="w-full h-full object-cover"
+                style={{ objectPosition: 'left top', transform: 'scale(1.1)' }}
               />
             </div>
           </div>
